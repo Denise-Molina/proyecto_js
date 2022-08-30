@@ -43,7 +43,7 @@ btnInicioSesion.addEventListener("click", () => {
     }
     localStorage.setItem("InicioSolicitante", JSON.stringify(InicioSolicitante));
 
-    if ((user === ususarioSolicitante) && ( contra === passwordSolicitante)) {
+    if ((user === ususarioSolicitante) && (contra === passwordSolicitante)) {
         Swal.fire({
             icon:'success',
             title: 'Bienvenido/a ' + ususarioSolicitante + ' a Cine Hits',
@@ -101,8 +101,6 @@ btnRegistrarse.addEventListener("click", () => {
 })
 
 
-
-
 //verificacion de email
 /*
 async function verificarEmail(emailSolicitante) {
@@ -117,5 +115,4 @@ async function verificarEmail(emailSolicitante) {
 btnRegistrarse.addEventListener("click", ()=>{
 verificarEmail(emailSolicitante);
 })
-
 */

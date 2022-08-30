@@ -1,114 +1,3 @@
-let peliculasCartelera = [{
-        id: 1,
-        titulo: "Lightyear",
-        anio: 2022,
-        genero: "animación",
-        duracion: "100min",
-
-    },
-    {
-        id: 2,
-        titulo: "El perro Samurai",
-        anio: 2022,
-        genero: "animación",
-        duracion: "90min",
-    },
-    {
-        id: 3,
-        titulo: "DC Liga de Supermarscotas",
-        anio: 2022,
-        genero: "animación",
-        duracion: "106min",
-
-    },
-    {
-        id: 4,
-        titulo: "Minions, nace un Villano",
-        anio: 2022,
-        genero: "animación",
-        duracion: "87min",
-    },
-
-    {
-        id: 5,
-        titulo: "Toy Story 4",
-        anio: 2022,
-        genero: "animación",
-        duracion: "90min",
-    },
-    {
-        id: 6,
-        titulo: "La ciudad perdida",
-        anio: 2022,
-        genero: "acción",
-        duracion: "130min",
-    },
-    {
-        id: 7,
-        titulo: "Jurassic Worl Dominio",
-        anio: 2022,
-        genero: "aventuras",
-        duracion: "128min",
-    },
-    {
-        id: 8,
-        titulo: "Tren bala",
-        anio: 2022,
-        genero: "acción",
-        duracion: "126min",
-    },
-    {
-        id: 9,
-        titulo: "Top Gun, Maverick",
-        anio: 2022,
-        genero: "acción",
-        duracion: "131min",
-    },
-    {
-        id: 10,
-        titulo: "Thor, el mundo oscuro ",
-        anio: 2022,
-        genero: "ciencia ficción",
-        duracion: "128min",
-    },
-    {
-        id: 11,
-        titulo: "Perdiendo el norte",
-        anio: 2022,
-        genero: "comedia",
-        duracion: "90min",
-    },
-    {
-        id: 12,
-        titulo: "30 noches con mi ex",
-        anio: 2022,
-        genero: "comedia",
-        duracion: "95min",
-    },
-    {
-        id: 13,
-        titulo: "Buena suerte Leo",
-        anio: 2022,
-        genero: "comedia",
-        duracion: "97min",
-    },
-    {
-        id: 14,
-        titulo: "El teléfono negro",
-        anio: 2022,
-        genero: "terror",
-        duracion: "104min",
-    },
-    {
-        id: 15,
-        titulo: "La habitación del horror",
-        anio: 2022,
-        genero: "terror",
-        duracion: "98min",
-    },
-]
-
-
 const agregarBtn = document.querySelectorAll('.readMore_btn ');
 let carrito = [];
 const tbody = document.querySelector('.tbody')
@@ -251,9 +140,35 @@ btnVaciar.addEventListener('click', () => {
 
 //finalizar compra cartel
 
-const fianlizar_compra = document.getElementById('finalizar_compra');
+const finalizar_compra = document.getElementById('finalizar_compra');
 
-finalizar_compra.onclick = () => {
+finalizar_compra.onclick= () => {
+    swal.fire({
+        title: '¿Quiere finalizar la compra?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Si',
+        denyButtonText: `No`,
+    }).then((result) => {
+        if (result.isConfirmed){            Swal.fire({
+            icon: 'success',
+            title: 'Compra confirmada!',
+            text: 'Sus entradas serán enviadas a su correo electrónico',
+
+        })}
+        else if (result.isDenied) {
+            Swal.fire({
+                icon: 'error',
+                title: 'No se guardaron los cambios'
+            })
+        }
+        })
+ }
+
+/*
+const finalizarCompra = document.getElementById('finalizarCompra');
+
+finalizarCompra.addEventListener ("click", () => {
     swal.fire({
         title: '¿Quiere finalizar la compra?',
         showDenyButton: true,
@@ -262,10 +177,19 @@ finalizar_compra.onclick = () => {
         denyButtonText: `No`,
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire('Compra confirmada!', '', 'success')
-          } else if (result.isDenied) {
-            Swal.fire('No se guardaron cambios', '', 'error')
-          }
-        })
- }
+            Swal.fire({
+                icon: 'success',
+                title: 'Compra confirmada!',
+                text: 'Sus entradas serán enviadas a su correo electrónico',
 
+            })
+        } else if (result.isDenied) {
+            Swal.fire({
+                icon: 'error',
+                title: 'No se guardaron los cambios'
+            })
+        }
+    })
+})
+*/
+//Nuevos Estrenos
