@@ -4,8 +4,10 @@ const tbody = document.querySelector('.tbody')
 const btnVaciar = document.querySelector('.vaciarCarrito');
 
 agregarBtn.forEach(btn => {
-    btn.addEventListener('click', agregarAlCarrito)
+  btn =  btn.addEventListener('click', agregarAlCarrito)
 })
+
+
 
 function agregarAlCarrito(e) {
     const button = e.target;
@@ -25,12 +27,14 @@ function agregarAlCarrito(e) {
     aniadirItemCarrito(newItem);
 }
 
+
+
 function aniadirItemCarrito(item) {
 
     const inputElemento = tbody.getElementsByClassName('inputElemento')
 
     for (let index = 0; index < carrito.length; index++) {
-        if (carrito[index].titulo.trim() === item.titulo.trim()) {
+        if (carrito[index].titulo.trim() === item.titulo.trim() ) {
             carrito[index].cantidad++;
             const inputValue = inputElemento[index];
             inputValue.value++;
@@ -87,7 +91,6 @@ function carritoTotal() {
 function removerItemCarrito(e) {
     const buttonDelete = e.target
     const tr = buttonDelete.closest(".itemCarrito");
-
     const titulo = tr.querySelector('.title').textContent;
     for (let index = 0; index < carrito.length; index++) {
         if (carrito[index].titulo.trim() === titulo.trim()) {
@@ -114,8 +117,6 @@ function sumarCantidad(e) {
     })
 }
 
-
-
 function addLocalStorage() {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
@@ -129,7 +130,6 @@ window.onload = function () {
 
 }
 
-
 btnVaciar.addEventListener('click', () => {
     tr = document.querySelectorAll("tr");
     carrito = [];
@@ -139,10 +139,10 @@ btnVaciar.addEventListener('click', () => {
 
 
 //finalizar compra cartel
+/*
+const finalizarCompra = document.getElementById('finalizar-compra');
 
-const finalizarCompra = document.getElementById('finalizarCompra');
-
-finalizarCompra.onclick = () => {
+finalizarCompra.addEventListener('click', () => {
     swal.fire({
         title: '¿Quiere finalizar la compra?',
         showDenyButton: true,
@@ -155,7 +155,6 @@ finalizarCompra.onclick = () => {
                 icon: 'success',
                 title: 'Compra confirmada!',
                 text: 'Sus entradas serán enviadas a su correo electrónico',
-
             })
         } else if (result.isDenied) {
             Swal.fire({
@@ -164,6 +163,5 @@ finalizarCompra.onclick = () => {
             })
         }
     })
-}
-
-//Nuevos Estrenos
+})
+*/
