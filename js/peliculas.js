@@ -7,8 +7,6 @@ agregarBtn.forEach(btn => {
   btn =  btn.addEventListener('click', agregarAlCarrito)
 })
 
-
-
 function agregarAlCarrito(e) {
     const button = e.target;
     const item = button.closest('.card');
@@ -26,7 +24,6 @@ function agregarAlCarrito(e) {
 
     aniadirItemCarrito(newItem);
 }
-
 
 
 function aniadirItemCarrito(item) {
@@ -137,31 +134,3 @@ btnVaciar.addEventListener('click', () => {
     carritoTotal();
 })
 
-
-//finalizar compra cartel
-/*
-const finalizarCompra = document.getElementById('finalizar-compra');
-
-finalizarCompra.addEventListener('click', () => {
-    swal.fire({
-        title: '¿Quiere finalizar la compra?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: 'Si',
-        denyButtonText: `No`,
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Compra confirmada!',
-                text: 'Sus entradas serán enviadas a su correo electrónico',
-            })
-        } else if (result.isDenied) {
-            Swal.fire({
-                icon: 'error',
-                title: 'No se guardaron los cambios'
-            })
-        }
-    })
-})
-*/
