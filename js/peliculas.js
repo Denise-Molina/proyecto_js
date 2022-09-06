@@ -10,11 +10,11 @@ agregarBtn.forEach(btn => {
 function agregarAlCarrito(e) {
     const button = e.target;
     const item = button.closest('.card');
-    const itemTitulo = item.querySelector('.card-title').textContent;
+    const itemTitulo = item.querySelector('.title').textContent;
     const itemPrecio = item.querySelector('.precio').textContent;
     const itemImg = item.querySelector('.movie').src;
 
-    const newItem = {
+    const nuevoItem = {
         titulo: itemTitulo,
         precio: parseFloat(itemPrecio),
         img: itemImg,
@@ -22,7 +22,7 @@ function agregarAlCarrito(e) {
     }
 
 
-    aniadirItemCarrito(newItem);
+    aniadirItemCarrito(nuevoItem);
 }
 
 
