@@ -1,10 +1,10 @@
-const agregarBtn = document.querySelectorAll('.readMore_btn ');
 let carrito = [];
+const agregarBtn = document.querySelectorAll('.readMore_btn ');
 const tbody = document.querySelector('.tbody')
 const btnVaciar = document.querySelector('.vaciarCarrito');
 
 agregarBtn.forEach(btn => {
-  btn =  btn.addEventListener('click', agregarAlCarrito)
+    btn.addEventListener('click', agregarAlCarrito)
 })
 
 function agregarAlCarrito(e) {
@@ -31,7 +31,7 @@ function aniadirItemCarrito(item) {
     const inputElemento = tbody.getElementsByClassName('inputElemento')
 
     for (let index = 0; index < carrito.length; index++) {
-        if (carrito[index].titulo.trim() === item.titulo.trim() ) {
+        if (carrito[index].titulo.trim() === item.titulo.trim()) {
             carrito[index].cantidad++;
             const inputValue = inputElemento[index];
             inputValue.value++;
@@ -107,7 +107,8 @@ function sumarCantidad(e) {
     const titulo = tr.querySelector('.title').textContent;
     carrito.forEach(item => {
         if (item.titulo.trim() === titulo) {
-            sumaInput.value < 1 ? sumaInput = 1 : item.cantidad = sumaInput.value;
+            sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.value;
+            item.cantidad = sumaInput.value;
             carritoTotal();
 
         }
@@ -134,3 +135,29 @@ btnVaciar.addEventListener('click', () => {
     carritoTotal();
 })
 
+//compra Index
+
+const comprar = document.getElementById('comprar')
+
+comprar.addEventListener('click', () => {
+    swal.fire({
+        title: '¿Quiere finalizar la compra?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Si',
+        denyButtonText: `No`,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Compra confirmada!',
+                text: 'Sus entradas serán enviadas a su correo electrónico',
+            })
+        } else if (result.isDenied) {
+            Swal.fire({
+                icon: 'error',
+                title: 'No se guardaron los cambios'
+            })
+        }
+    })
+})

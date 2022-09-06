@@ -2,40 +2,64 @@
     "peliculaNueva": "Un crimen Argentino",
     "fechaDeEstreno": "28/08/2022",
     "duracion": "105min",
-    "genero": "policial"
+    "genero": "policial",
+    "img": "../img/proximamente1.jpg"
 }, {
     "peliculaNueva": "After, amor infinito",
     "fechaDeEstreno": "25/08/2022",
     "duracion": "120min",
-    "genero": "romance"
+    "genero": "romance",
+    "img": "../img/proximamente2.jpg"
 }, {
     "peliculaNueva": "Elvis",
     "fechaDeEstreno": "01/09/2022",
     "duracion": "89min",
-    "genero": "biografia"
+    "genero": "biografia",
+    "img": "../img/proximamente3.jpg"
 }, {
     "peliculaNueva": "La chica salvaje",
     "fechaDeEstreno": "01/09/2022",
     "duracion": "107min",
-    "genero": "terror"
+    "genero": "terror",
+    "img": "../img/proximamente4.jpg"
 }, {
     "peliculaNueva": "La huerfana el origen",
     "fechaDeEstreno": "08/09/2022",
     "duracion": "108min",
-    "genero": "terror"
-}, {
+    "genero": "terror",
+    "img": "../img/proximamente5.jpg"
+},
+{
     "peliculaNueva": "Bestia",
     "fechaDeEstreno": "11/08/2022",
     "duracion": "110min",
-    "genero": "acción"
+    "genero": "acción",
+    "img": "../img/proximamente6.jpg"
 }, {
     "peliculaNueva": "Avatar, el camino del agua",
     "fechaDeEstreno": "15/09/2022",
     "duracion": "97min",
-    "genero": "ciencia ficción"
+    "genero": "ciencia ficción",
+    "img": "../img/proximamente7.jpg"
 }, {
+    "peliculaNueva": "La luz del diablo",
+    "fechaDeEstreno": "27/20/2022",
+    "duracion": "98min",
+    "genero": "terror",
+    "img": "../img/proximamente8.jpg"
+},
+{
+    "peliculaNueva": "Black Adam",
+    "fechaDeEstreno": "20/10/2022",
+    "duracion": "97min",
+    "genero": "acción",
+    "img": "../img/proximamente9.jpg"
+},
+{
     "peliculaNueva": "Visita por ultima vez",
     "fechaDeEstreno": "01/09/2022",
     "duracion": "99min",
-    "genero": "terror"
-}]
+    "genero": "terror",
+    "img": "../img/proximamente10.jpg"
+}
+]
