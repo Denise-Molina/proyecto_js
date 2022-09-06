@@ -1,6 +1,6 @@
 //finalizar compra cartel
 
-const finalizarCompra = document.getElementById('finalizar-compra');
+const finalizarCompra = document.getElementById('finalizarCompra');
 
 finalizarCompra.addEventListener('click', () => {
     swal.fire({
@@ -28,3 +28,4 @@ finalizarCompra.addEventListener('click', () => {
         }
     })
 })
+

@@ -1,4 +1,4 @@
-//pelicula1
+//desplegable
 //todos los botones para ver más info
 //readMore_btn
 let readMore_btn = document.querySelectorAll('.btn-light');

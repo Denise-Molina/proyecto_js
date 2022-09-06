@@ -20,7 +20,7 @@ fetch('/js/data.json')
             </div>
             </div>
 `
-proximamentePelis.appendChild(div)
+proximamentePelis.append(div)
         })
     })
 
