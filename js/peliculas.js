@@ -1,3 +1,5 @@
+//carrito de compras
+
 let carrito = [];
 const agregarBtn = document.querySelectorAll('.readMore_btn ');
 const tbody = document.querySelector('.tbody')
@@ -44,6 +46,8 @@ function aniadirItemCarrito(item) {
     crearCarrito();
 }
 
+//crear carrito
+
 function crearCarrito() {
     tbody.innerHTML = '';
     carrito.map(item => {
@@ -72,7 +76,7 @@ function crearCarrito() {
     carritoTotal();
 }
 
-
+//total
 
 function carritoTotal() {
     let total = 0;
@@ -84,6 +88,8 @@ function carritoTotal() {
     itemCarritoTotal.innerHTML = "$" + total;
     addLocalStorage();
 }
+
+//remover del carrito
 
 function removerItemCarrito(e) {
     const buttonDelete = e.target
@@ -100,6 +106,7 @@ function removerItemCarrito(e) {
 
 }
 
+//sumar cantidad
 
 function sumarCantidad(e) {
     const sumaInput = e.target;
@@ -107,8 +114,7 @@ function sumarCantidad(e) {
     const titulo = tr.querySelector('.title').textContent;
     carrito.forEach(item => {
         if (item.titulo.trim() === titulo) {
-            sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.value;
-            item.cantidad = sumaInput.value;
+            sumaInput.value < 1 ? sumaInput.value = 1 : item.cantidad = sumaInput.value;
             carritoTotal();
 
         }
@@ -128,9 +134,11 @@ window.onload = function () {
 
 }
 
+//botón vaciar
+
 btnVaciar.addEventListener('click', () => {
     Swal.fire({
-        title: '¿Queres eliminar todo los productos?',
+        title: '¿Esta seguro que desea eliminar las funciones seleccionadas?',
         icon: 'warning',
         iconColor: '#DD3333',
         showCancelButton: true,
@@ -148,4 +156,3 @@ btnVaciar.addEventListener('click', () => {
         }
     })
 })
-

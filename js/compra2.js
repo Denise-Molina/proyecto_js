@@ -1,4 +1,5 @@
 //compra Index
+//cartel de compra en la sección de index
 
 const comprar = document.getElementById('comprar')
 

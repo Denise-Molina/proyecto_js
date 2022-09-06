@@ -1,4 +1,5 @@
 //finalizar compra cartel
+//cartel de compra en la sección de compra
 
 const finalizarCompra = document.getElementById('finalizarCompra');
 

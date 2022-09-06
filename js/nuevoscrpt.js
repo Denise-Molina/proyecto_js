@@ -16,7 +16,7 @@ document.addEventListener('click', e => {
 //inicio de sesión
 
 let user = 'Flor'
-let contra = 'hola'
+let contra = '1234'
 let ingresar = false
 
 const username = document.getElementById('username')
@@ -45,7 +45,7 @@ btnInicioSesion.addEventListener("click", () => {
 
     if ((user === ususarioSolicitante) && (contra === passwordSolicitante)) {
         Swal.fire({
-            icon:'success',
+            icon: 'success',
             title: 'Bienvenido/a ' + ususarioSolicitante + ' a Cine Hits',
             showConfirmButton: false,
             timer: 3000,
@@ -60,6 +60,7 @@ btnInicioSesion.addEventListener("click", () => {
             timer: 3000,
         })
     }
+
 })
 
 //registro
@@ -94,25 +95,8 @@ btnRegistrarse.addEventListener("click", () => {
     Swal.fire({
         icon: 'success',
         title: 'Tus datos se registraron correctamente',
-        text: 'Se te enviara un correo electrónico a tu cuenta con la confirmación del registro',
+        text: 'Se te enviara un correo electrónico a tu cuenta con la confirmación del registro y los pasos a seguir para su correcta activación',
         showConfirmButton: false,
         timer: 5000
     })
 })
-
-
-//verificacion de email
-/*
-async function verificarEmail(emailSolicitante) {
-    let API = ` https://www.disify.com/api/email/${emailSolicitante}`;
-    const resp = await fetch(API);
-    const dataJson = await resp.json();
-    console.log(dataJson);
-}
-
-
-
-btnRegistrarse.addEventListener("click", ()=>{
-verificarEmail(emailSolicitante);
-})
-*/

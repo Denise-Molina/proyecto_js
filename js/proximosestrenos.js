@@ -1,4 +1,5 @@
 //proximos estrenos
+//archivo data.json
 
 const proximamentePelis = document.querySelector('.nuevosEstrenos');
 
