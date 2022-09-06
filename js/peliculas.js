@@ -129,10 +129,24 @@ window.onload = function () {
 }
 
 btnVaciar.addEventListener('click', () => {
-    tr = document.querySelectorAll("tr");
-    carrito = [];
-    tbody.innerHTML = '';
-    carritoTotal();
+    Swal.fire({
+        title: '¿Queres eliminar todo los productos?',
+        icon: 'warning',
+        iconColor: '#DD3333',
+        showCancelButton: true,
+        confirmButtonText: 'Si, eliminar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+              title:'Productos eliminados con exito',
+              icon: 'success',
+            })
+            tr = document.querySelectorAll("tr");
+            carrito = [];
+            tbody.innerHTML = '';
+            carritoTotal();
+        }
+    })
 })
 
 //compra Index
@@ -146,13 +160,18 @@ comprar.addEventListener('click', () => {
         showCancelButton: true,
         confirmButtonText: 'Si',
         denyButtonText: `No`,
-    }).then((result) => {
+    })
+    .then((result) => {
         if (result.isConfirmed) {
             Swal.fire({
                 icon: 'success',
                 title: 'Compra confirmada!',
                 text: 'Sus entradas serán enviadas a su correo electrónico',
             })
+            tr = document.querySelectorAll("tr");
+            carrito = [];
+            tbody.innerHTML = '';
+            carritoTotal();
         } else if (result.isDenied) {
             Swal.fire({
                 icon: 'error',

@@ -16,6 +16,10 @@ finalizarCompra.addEventListener('click', () => {
                 title: 'Compra confirmada!',
                 text: 'Sus entradas serán enviadas a su correo electrónico',
             })
+            tr = document.querySelectorAll("tr");
+            carrito = [];
+            tbody.innerHTML = '';
+            carritoTotal();
         } else if (result.isDenied) {
             Swal.fire({
                 icon: 'error',
